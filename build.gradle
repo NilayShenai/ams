@@ -35,13 +35,18 @@ javafx {
 }
 
 dependencies {
-  implementation('org.controlsfx:controlsfx:11.2.1')
-
+  implementation 'org.mongodb:mongodb-driver-sync:4.9.0'
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-  implementation 'org.mongodb:mongodb-driver-sync:4.9.0'
-
+  implementation 'org.openjfx:javafx-controls:21'
+  implementation 'org.openjfx:javafx-fxml:21'
 }
+
+javafx {
+  version = "21"
+  modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
 
 test {
 useJUnitPlatform()}
